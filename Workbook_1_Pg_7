@@ -1,0 +1,4 @@
+import pandas as pd
+Location = "/Wyoming_Population.csv"
+df = pd.read_csv(Location, names=['GEOID', 'STATE', 'NAME', 'POP100', 'HU100'])
+df.columns = ['GEOID', 'STATE', 'NAME', 'POP100', 'HU100']
