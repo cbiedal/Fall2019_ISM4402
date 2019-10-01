@@ -1,0 +1,8 @@
+import pandas as pd
+Location = "datasets/gradedata.csv"
+df = pd.read_csv(Location)
+df.head()
+# Insert column and identify passing grades above 80
+import numpy as np
+df['Pass or Fail'] = np.where(df['grade']<80, 'fail', 'pass')
+df.tail(10)
