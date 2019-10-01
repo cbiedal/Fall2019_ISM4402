@@ -1,0 +1,9 @@
+import pandas as pd
+Location = "datasets/gradedata.csv"
+df = pd.read_csv(Location)
+df.head()
+# insert column for timemgmt
+# show busy if student exercises more than 3 hours and studies more than 17 hours
+import numpy as np
+df['timemgmt'] = np.where((df['exercise']>3) & (df['hours']>17), 'busy', 'not busy')
+df.head()
