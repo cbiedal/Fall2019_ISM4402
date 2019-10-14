@@ -1,0 +1,6 @@
+import pandas as pd
+location = 'datasets/gradedata.csv'
+df = pd.read_csv(location)
+df.head()
+df = df.sort_values(by=['lname', 'age', 'grade'], ascending=['true','true','true'])
+df.head()
