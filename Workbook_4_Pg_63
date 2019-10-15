@@ -1,0 +1,4 @@
+df['M or F'] = np.where(df['gender']='female', '1', '0')
+import numpy as np
+df['M or F'] = np.where(df['gender']=='female', '1', '0')
+df.head()
