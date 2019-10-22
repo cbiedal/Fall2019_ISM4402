@@ -1,0 +1,20 @@
+import pandas as pd
+names = ['Bob','Jessica','Mary','John','Mel']
+grades = [76,83,77,78,95]
+GradeList = zip(names,grades)
+df = pd.DataFrame(data = GradeList,
+ columns=['Names', 'Grades'])
+%matplotlib inline
+df.plot()
+import matplotlib.pyplot as plt
+df.plot()
+displayText = "Wow!"
+xloc = 0
+yloc = df['Grades'].max()
+xtext = 2
+ytext = -150
+plt.annotate(displayText,
+ xy=(xloc, yloc),
+ xytext=(xtext,ytext),
+ xycoords=('axes fraction', 'data'),
+ textcoords='offset points')
