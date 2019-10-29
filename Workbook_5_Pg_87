@@ -1,0 +1,7 @@
+import pandas as pd
+location = 'datasets/gradedata.csv'
+df = pd.read_csv(location)
+df.head()
+import matplotlib.pyplot as plt
+%matplotlib inline
+plt.scatter(df['hours'], df['grade'])
